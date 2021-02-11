@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "sftp-configurations.component.sass"
+    ],
+    "names": [],
+    "file": "sftp-configurations.component.css"
+}
