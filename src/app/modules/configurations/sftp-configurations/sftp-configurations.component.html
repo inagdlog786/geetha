@@ -1,166 +1,215 @@
-<div class="row ">
-    <div class="col-md-12">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et <br> magna aliqua. Ut enim ad minim veniam</p>
-
-        <h5>Data Source Location</h5>
-    </div>
-</div>
 
 
+<div class="sftpConfig">
 
-<div>
-    <!-- Form Start -->
-    <form class="row" [formGroup]="sftpForms" (ngSubmit)="onSubmit()">  
-        <div class="col-md-3 mb-3">
-            <label for="url" class="form-label">URL</label>
-            <select class="form-control" aria-label="Default select example" formControlName="sftpUrl">
-                <option selected>(SFTP URL)</option>
-                <option>One</option>
-                <option>Two</option>
-                <option>Three</option>
-            </select>
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="Folder" class="form-label">Folder</label>
-            <select class="form-control" aria-label="Default select example" formControlName="sftpFolder">
-                <option selected>Folder Location</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-        </div>
-
-        <div class="col-md-6 mb-3">&nbsp;</div>
-
-        <div class="col-md-3 mb-3">
-            <label for="sftpUserName" class="form-label">User Name</label>
-            <input type="email" class="form-control" id="userName" aria-describedby="userName" formControlName="sftpUserName">
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="userPassword" class="form-label">Password</label>
-            <label for="userPassword" class="form-label float-end"><i class="fa fa-eye"></i> Show</label>
-            <input type="password" class="form-control" id="sftpPassword" formControlName="sftpPassword">
-        </div>
-
-        <div class="col-md-6 mb-3">&nbsp;</div>
-
-        <div class="col-md-3 mb-3">
-            <label for="feedType" class="form-label">Feed Type</label>
-            <select class="form-control" aria-label="Feed Type">
-                <option selected>XML</option>
-                <option>PDF</option>
-                <option>JPG</option>
-                <option>PNG</option>
-            </select>
-        </div>
-
-        <div class="col-md-3 mb-3">
-            <!-- <label for="validationFile" class="form-label">Validation File</label>
-            <input type="file" class="form-control" id="validationFile" aria-describedby="validationFile"> -->
-
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Validation File</label>
-                <input type="file" class="form-control" id="validationFile">
-              </div>
-
-        </div>
-
-        <div class="col-md-6 mb-3">&nbsp;</div>
-        <div class="col-md-3 mb-3">
-            <label for="dataUserName" class="form-label">Data Source Name</label>
-            <input type="text" class="form-control" id="dataUserName" aria-describedby="dataUserName">
-        </div>
-
-        <div class="col-md-3 mb-3">
-            <label for="feedCategory" class="form-label">Feed Category</label>
-            <select class="form-control" aria-label="Feed Category">
-                <option selected>Banking</option>
-                <option value="1">Company Memo</option>
-            </select>
-        </div>
-        <div class="col-md-6 mb-3">&nbsp;</div>
-        <div class="col-md-3 mb-3">
-            <label for="effectiveStartDate" class="form-label">Effective Start Date</label>
-            <input type="date" class="form-control" id="effectiveStartDate" aria-describedby="effectiveStartDate">
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="effectiveEndDate" class="form-label">Effective End Date</label>
-            <input type="date" class="form-control" id="effectiveEndDate" aria-describedby="effectiveEndDate">
-        </div>
-        <div class="col-md-2 mb-3">
-            <label for="frequency" class="form-label">Frequency</label>
-            <select class="form-control" aria-label="frequency">
-                <option selected>Daily</option>
-                <option value="1">Weekly</option>
-            </select>
-        </div>
-        <div class="col-md-2 mb-3 ">
-            <label for="time" class="form-label">Time</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">@</span>
+    <div class="container-fluid bg-light">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-md-12">
+                    <h3>Configauration Setting</h3>
+                    <h6>Tuesday, february 2021 </h6>
                 </div>
-                <select class="form-control" aria-label="time">
-                    <option selected>8:00</option>
-                    <option value="1">9:00</option>
-                </select>
             </div>
         </div>
-        <div class="col-md-2 mb-3">
-            <label for="timeZone" class="form-label">Time Zone</label>
-            <select class="form-control" aria-label="timeZone">
-                <option selected>EST</option>
-                <option value="1"></option>
-            </select>
+    </div>
+
+
+    <div class="container">
+        <div class="row pt-3">
+            <div class="col-md-12">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et
+                    <br> magna aliqua. Ut enim ad minim veniam</p>
+
+                <h5>Data Source Location</h5>
+            </div>
         </div>
 
-        <div class="col-md-3 mb-3">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <button type="reset" class="btn btn-link">Cancel</button>
+
+        <div>
+            <!-- Form Start -->
+            <form [formGroup]="sftpForms" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="url" class="form-label">URL</label>
+                        <select class="form-control" aria-label="Default select example" formControlName="sftpUrl">
+                            <option selected>(SFTP URL)</option>
+                            <option>One</option>
+                            <option>Two</option>
+                            <option>Three</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="Folder" class="form-label">Folder</label>
+                        <select class="form-control" aria-label="Default select example" formControlName="sftpFolder">
+                            <option selected>Folder Location</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 mb-3">&nbsp;</div> -->
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="sftpUserName" class="form-label">User Name</label>
+                        <input type="email" class="form-control" id="userName" aria-describedby="userName"
+                            formControlName="sftpUserName">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="userPassword" class="form-label">Password</label>
+                        <label for="userPassword" class="form-label float-right" (click)="toggleFieldTextType()">
+                            <i class="fa fa-eye-slash pr-1"
+                                [ngClass]="{'fa-eye-slash': !fieldTextType, 'fa-eye': fieldTextType }"></i>
+                            <span *ngIf="!fieldTextType">Show</span>
+                            <span *ngIf="fieldTextType">Hide</span>
+                        </label>
+                        <div class="input-group mb-2 mr-sm-2">
+                            <input [type]="fieldTextType ? 'text' : 'password'" class="form-control" id="sftpPassword"
+                                formControlName="sftpPassword" />
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 mb-3">&nbsp;</div> -->
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="feedType" class="form-label">Feed Type</label>
+                        <select class="form-control" aria-label="Feed Type" formControlName="sftpFeedType">
+                            <option selected>XML</option>
+                            <option>PDF</option>
+                            <option>JPG</option>
+                            <option>PNG</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <!-- <label for="validationFile" class="form-label">Validation File</label>
+            <input type="file" class="form-control" id="validationFile" aria-describedby="validationFile"> -->
+
+                        <div class="form-group">
+                            <label for="validationFile">Validation File</label>
+                            <input type="file" class="form-control browseFileInty" id="validationFile"
+                                formControlName="sftpValidationFile">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 mb-3">&nbsp;</div> -->
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="dataUserName" class="form-label">Data Source Name</label>
+                        <input type="text" class="form-control" id="dataUserName" aria-describedby="dataUserName"
+                            formControlName="sftpdataUserName">
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label for="feedCategory" class="form-label">Feed Category</label>
+                        <select class="form-control" aria-label="Feed Category" formControlName="sftpFeedCategory">
+                            <option selected>Banking</option>
+                            <option value="1">Company Memo</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 mb-3">&nbsp;</div> -->
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="effectiveStartDate" class="form-label">Effective Start Date</label>
+                        <!-- <input type="date" class="form-control" id="effectiveStartDate"
+                        aria-describedby="effectiveStartDate" formControlName="sftpEffectiveStartDate"
+                        bsDatepicker  [minDate]="minDate" (ngModelChange)="sftpEffectiveChangeStartDate()"> -->
+                        <!-- <input class="form-control" bsDatepicker [minDate]="minDate" (change)="sftpEffectiveChangeStartDate()"> -->
+                        <input type="date" class="form-control" id="effectiveStartDate"
+                            aria-describedby="effectiveStartDate" formControlName="sftpEffectiveStartDate">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="effectiveEndDate" class="form-label">Effective End Date</label>
+                        <input type="date" class="form-control" id="effectiveEndDate"
+                            aria-describedby="effectiveEndDate" formControlName="sftpEffectiveEndtDate">
+
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label for="frequency" class="form-label">Frequency</label>
+                        <select class="form-control" aria-label="frequency" formControlName="sftpFrequency">
+                            <option selected>Daily</option>
+                            <option value="1">Weekly</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 mb-3 ">
+                        <label for="time" class="form-label pl-4">Time</label>
+                        <div class="input-group">
+                            <span class="input-group-text btn btn-link pl-0">@</span>
+                            <select class="form-control" aria-label="time" formControlName="sftpTime">
+                                <option selected>8:00</option>
+                                <option value="1">9:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label for="timeZone" class="form-label">Time Zone</label>
+                        <select class="form-control" aria-label="timeZone" formControlName="sftpTimeZone">
+                            <option selected>EST</option>
+                            <option value="1"></option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="col-md-3 mb-3">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-link">Cancel</button>
+                    </div>
+                </div>
+
+            </form>
+            <!-- Form Start Close-->
         </div>
-    </form>
-    <!-- Form Start Close-->
-</div>
 
-<div class="row ">
-    <div class="col-md-12">
-        <h5>Data Source</h5>
-    </div>
-    <div class="col-md-12">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Date Source Name</th>
-                    <th>Feed Category</th>
-                    <th>Feed Type</th>
-                    <th>SFTP URL / Folder Location</th>
-                    <th>Validation File</th>
-                    <th>Effective Start Date</th>
-                    <th>Effective End Date</th>
-                    <th>Frequency</th>
-                    <th width="100px">&nbsp;</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let sftpitem of datasource" >
-                    <td>{{sftpitem.sftpUrl}}</td>
-                    <td>{{sftpitem.sftpFolder}}</td>
-                    <td>ccc</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td align="center">
-                        <button class="btn btn-link p-0 mx-2"><i class="fa-edit fa"></i></button>
-                        <button class="btn btn-link p-0 mx-2"><i class="fa-trash fa"></i></button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="row ">
+            <div class="col-md-12">
+                <h5>Data Source</h5>
+            </div>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered dataSourceTable">
+                        <thead>
+                            <tr>
+                                <th>Date Source Name</th>
+                                <th>Feed Category</th>
+                                <th>Feed Type</th>
+                                <th>SFTP URL / Folder Location</th>
+                                <th>Validation File</th>
+                                <th>Effective Start Date</th>
+                                <th>Effective End Date</th>
+                                <th>Frequency</th>
+                                <th width="100px">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let sftpitem of datasource">
+                                <td>{{sftpitem.sftpdataUserName}}</td>
+                                <td>{{sftpitem.sftpFeedCategory}}</td>
+                                <td>{{sftpitem.sftpFeedType}}</td>
+                                <td>{{sftpitem.sftpUrl}} / {{sftpitem.sftpFolder}}</td>
+                                <td>{{sftpitem.sftpvalidationFile}}</td>
+                                <td>{{sftpitem.sftpEffectiveStartDate}}</td>
+                                <td>{{sftpitem.sftpEffectiveEndtDate}}</td>
+                                <td>{{sftpitem.sftpFrequency}}</td>
+                                <td align="center">
+                                    <button class="btn btn-link p-0 mx-2"><i class="fa-edit fa"></i></button>
+                                    <button class="btn btn-link p-0 mx-2"><i class="fa-trash fa"></i></button>
+                                    <!-- <button class="btn btn-link p-0 mx-2" (click)="sftpOnEdit(sftpitem)"><i class="fa-edit fa"></i></button>
+                                <button class="btn btn-link p-0 mx-2" (click)="sftpOnDel(sftpitem)"><i class="fa-trash fa"></i></button> -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 
 
 <!-- 

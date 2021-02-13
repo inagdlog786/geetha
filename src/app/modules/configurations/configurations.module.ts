@@ -5,13 +5,20 @@ import { ConfigurationsRoutingModule } from './configurations-routing.module';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+// Datepicker module
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { DistributionConfigurationsComponent } from './distribution-configurations/distribution-configurations.component';
+
 
 @NgModule({
-  declarations: [],
+  declarations: [DistributionConfigurationsComponent],
   imports: [
     CommonModule,
     ConfigurationsRoutingModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
+    BrowserAnimationsModule,
+    BsDatepickerModule
   ]
 })
 export class ConfigurationsModule { }

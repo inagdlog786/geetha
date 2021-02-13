@@ -4,12 +4,19 @@ import { SftpConfigurationsComponent } from './configurations/sftp-configuration
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+// Datepicker module
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 @NgModule({
   declarations: [SftpConfigurationsComponent],
   imports: [
     CommonModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
+    BsDatepickerModule,
+    BrowserAnimationsModule
   ]
 })
 export class ModulesModule { }

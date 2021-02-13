@@ -23,8 +23,6 @@ import { ConfigurationsModule } from './modules/configurations/configurations.mo
 import { ModulesModule } from './modules/modules.module';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +42,9 @@ import { ModulesModule } from './modules/modules.module';
     CommonModule,
     ConfigurationsRoutingModule,
     ConfigurationsModule,
-    ModulesModule
-
+    ModulesModule,
+    // ModalModule.forRoot(),
+    // TabsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
