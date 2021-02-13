@@ -7,21 +7,22 @@
 </div>
 
 
+
 <div>
     <!-- Form Start -->
-    <form class="row">
+    <form class="row" [formGroup]="sftpForms" (ngSubmit)="onSubmit()">  
         <div class="col-md-3 mb-3">
             <label for="url" class="form-label">URL</label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-control" aria-label="Default select example" formControlName="sftpUrl">
                 <option selected>(SFTP URL)</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
             </select>
         </div>
         <div class="col-md-3 mb-3">
             <label for="Folder" class="form-label">Folder</label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-control" aria-label="Default select example" formControlName="sftpFolder">
                 <option selected>Folder Location</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
@@ -32,30 +33,36 @@
         <div class="col-md-6 mb-3">&nbsp;</div>
 
         <div class="col-md-3 mb-3">
-            <label for="userName" class="form-label">User Name</label>
-            <input type="email" class="form-control" id="userName" aria-describedby="userName">
+            <label for="sftpUserName" class="form-label">User Name</label>
+            <input type="email" class="form-control" id="userName" aria-describedby="userName" formControlName="sftpUserName">
         </div>
         <div class="col-md-3 mb-3">
             <label for="userPassword" class="form-label">Password</label>
             <label for="userPassword" class="form-label float-end"><i class="fa fa-eye"></i> Show</label>
-            <input type="password" class="form-control" id="userPassword">
+            <input type="password" class="form-control" id="sftpPassword" formControlName="sftpPassword">
         </div>
 
         <div class="col-md-6 mb-3">&nbsp;</div>
 
         <div class="col-md-3 mb-3">
             <label for="feedType" class="form-label">Feed Type</label>
-            <select class="form-select" aria-label="Feed Type">
+            <select class="form-control" aria-label="Feed Type">
                 <option selected>XML</option>
-                <option value="1">PDF</option>
-                <option value="2">JPG</option>
-                <option value="3">PNG</option>
+                <option>PDF</option>
+                <option>JPG</option>
+                <option>PNG</option>
             </select>
         </div>
 
         <div class="col-md-3 mb-3">
-            <label for="validationFile" class="form-label">Validation File</label>
-            <input type="file" class="form-control" id="validationFile" aria-describedby="validationFile">
+            <!-- <label for="validationFile" class="form-label">Validation File</label>
+            <input type="file" class="form-control" id="validationFile" aria-describedby="validationFile"> -->
+
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Validation File</label>
+                <input type="file" class="form-control" id="validationFile">
+              </div>
+
         </div>
 
         <div class="col-md-6 mb-3">&nbsp;</div>
@@ -66,7 +73,7 @@
 
         <div class="col-md-3 mb-3">
             <label for="feedCategory" class="form-label">Feed Category</label>
-            <select class="form-select" aria-label="Feed Category">
+            <select class="form-control" aria-label="Feed Category">
                 <option selected>Banking</option>
                 <option value="1">Company Memo</option>
             </select>
@@ -82,7 +89,7 @@
         </div>
         <div class="col-md-2 mb-3">
             <label for="frequency" class="form-label">Frequency</label>
-            <select class="form-select" aria-label="frequency">
+            <select class="form-control" aria-label="frequency">
                 <option selected>Daily</option>
                 <option value="1">Weekly</option>
             </select>
@@ -93,7 +100,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">@</span>
                 </div>
-                <select class="form-select" aria-label="time">
+                <select class="form-control" aria-label="time">
                     <option selected>8:00</option>
                     <option value="1">9:00</option>
                 </select>
@@ -101,7 +108,7 @@
         </div>
         <div class="col-md-2 mb-3">
             <label for="timeZone" class="form-label">Time Zone</label>
-            <select class="form-select" aria-label="timeZone">
+            <select class="form-control" aria-label="timeZone">
                 <option selected>EST</option>
                 <option value="1"></option>
             </select>
@@ -120,7 +127,7 @@
         <h5>Data Source</h5>
     </div>
     <div class="col-md-12">
-        <table class="table table-striped" border="1">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Date Source Name</th>
@@ -131,23 +138,57 @@
                     <th>Effective Start Date</th>
                     <th>Effective End Date</th>
                     <th>Frequency</th>
-                    <th>&nbsp;</th>
+                    <th width="100px">&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td width="100px" align="center">
-                    <button class="btn link"><i class="fa-edit fa"></i></button>
-                    <button class="btn link"><i class="fa-trash fa"></i></button>
-                </td>
+                <tr *ngFor="let sftpitem of datasource" >
+                    <td>{{sftpitem.sftpUrl}}</td>
+                    <td>{{sftpitem.sftpFolder}}</td>
+                    <td>ccc</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td align="center">
+                        <button class="btn btn-link p-0 mx-2"><i class="fa-edit fa"></i></button>
+                        <button class="btn btn-link p-0 mx-2"><i class="fa-trash fa"></i></button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
 </div>
+
+
+
+<!-- 
+<form [formGroup]="profileForms" (ngSubmit)="onSubmit()">  
+  
+    <input type="text" formControlName="firstName" required>
+    <input type="email" formControlName="email">
+    <button type="submit" [disabled]="!profileForms.valid">Submit</button>
+  </form>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of datasource" >
+        <th scope="row"></th>
+        <td>{{item.firstname}}</td>
+        <td>{{item.email}}</td>
+        <td>
+            <button class="btn link"><i class="fa-edit fa"></i></button>
+            <button class="btn link"><i class="fa-trash fa"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->

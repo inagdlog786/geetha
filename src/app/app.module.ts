@@ -11,12 +11,18 @@ import { CommonModule } from '@angular/common';
 import { ConfigurationsRoutingModule } from './modules/configurations/configurations-routing.module';
 import { from } from 'rxjs';
 import { HeaderComponent } from './commons/header/header.component';
+import { PageFooterComponent } from './commons/page-footer/page-footer.component';
 import { ElementsComponent } from './bootstrap/elements/elements.component';
 
 
 // Datepicker module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
+import { ConfigurationsModule } from './modules/configurations/configurations.module';
+import { ModulesModule } from './modules/modules.module';
+
+
 
 
 @NgModule({
@@ -25,6 +31,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     LandingComponent,
     LoginComponent,
     HeaderComponent,
+    PageFooterComponent,
     ElementsComponent
   ],
   imports: [
@@ -35,7 +42,10 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     ReactiveFormsModule,
     AppRoutingModule,
     CommonModule,
-    ConfigurationsRoutingModule
+    ConfigurationsRoutingModule,
+    ConfigurationsModule,
+    ModulesModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
