@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators, NgModel } from '@angular/forms';
+
 
 
 @Component({
@@ -11,7 +12,13 @@ export class SftpConfigurationsComponent implements OnInit {
 
   datasource:any[]=[];  
 
-  minDate: Date;
+  
+  maxDate: Date = new Date();
+  minDate = new Date();
+  form1: any = {};
+
+
+  // minDate: Date;
 
   fieldTextType!: boolean;
   toggleFieldTextType() {
@@ -36,10 +43,12 @@ export class SftpConfigurationsComponent implements OnInit {
   });
 
   constructor(private fb: FormBuilder) { 
-    this.minDate = new Date();
+    // this.minDate = new Date();
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {     
+    this.maxDate.setDate(new Date().getDate());
+  }
 
   // sftpEffectiveChangeStartDate(){
   //   let startDate= this.sftpForms.value['sftpEffectiveStartDate'];

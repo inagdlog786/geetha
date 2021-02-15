@@ -1,25 +1,9 @@
-
-
 <div class="sftpConfig">
-
-    <div class="container-fluid bg-light">
-        <div class="container">
-            <div class="row py-3">
-                <div class="col-md-12">
-                    <h3>Configauration Setting</h3>
-                    <h6>Tuesday, february 2021 </h6>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <div class="container">
-        <div class="row pt-3">
+        <div class="row">
             <div class="col-md-12">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et
+                    labore                    et
                     <br> magna aliqua. Ut enim ad minim veniam</p>
 
                 <h5>Data Source Location</h5>
@@ -197,8 +181,16 @@
                                 <td>{{sftpitem.sftpEffectiveEndtDate}}</td>
                                 <td>{{sftpitem.sftpFrequency}}</td>
                                 <td align="center">
-                                    <button class="btn btn-link p-0 mx-2"><i class="fa-edit fa"></i></button>
-                                    <button class="btn btn-link p-0 mx-2"><i class="fa-trash fa"></i></button>
+                                    <button class="btn btn-link p-0 mx-2 icoStyle">
+                                        <!-- <i class="fa-edit fa"></i> -->
+                                        <!-- <img src="../../../../assets/images/icons/svg/pencil.svg" class="edit-ico" width="20"/>     -->
+<svg-icon src="../../../../assets/images/icons/svg/pencil.svg" class="editIco"></svg-icon>
+
+                                    </button>
+                                    <button class="btn btn-link p-0 mx-2 icoStyle">
+                                        <!-- <i class="fa-trash fa"></i> -->
+                                        <svg-icon src="../../../../assets/images/icons/svg/trash.svg" class="deltIco"></svg-icon>
+                                    </button>
                                     <!-- <button class="btn btn-link p-0 mx-2" (click)="sftpOnEdit(sftpitem)"><i class="fa-edit fa"></i></button>
                                 <button class="btn btn-link p-0 mx-2" (click)="sftpOnDel(sftpitem)"><i class="fa-trash fa"></i></button> -->
                                 </td>
